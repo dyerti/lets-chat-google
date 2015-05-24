@@ -1,24 +1,30 @@
-# Let's Chat - Gitlab Plugin
+# Let's Chat - Google Plugin
 
-Add Gitlab SSO support to [Let's Chat](http://sdelements.github.io/lets-chat/).
+Add Google SSO support to [Let's Chat](http://sdelements.github.io/lets-chat/).
 
 ### Install
 
 ```
-npm install lets-chat-gitlab
+npm install lets-chat-google
 ```
 
 ### Configure
+
+Create a web application in your Google developer console.
+https://console.developers.google.com
+
+Generate a OAuth client ID.
+Enable Google+ API support.
 
 ###### Example
 
 ```yml
 auth:
-  providers: [gitlab]
+  providers: [google]
 
-  gitlab:
-    clientID: '<Generate this from Gitlab>'
-    clientSecret: '<Generate this from Gitlab>'
-    gitlabURL: 'https://gitlab.com'
-    callbackURL: 'https://chat.domain.example'
+  google:
+    clientID: '<Get from https://console.developers.google.com>'
+    clientSecret: '<Get from https://console.developers.google.com>'
+    callbackURL: 'https://chat.domain.example/account/google/callback'
+    scope: 'openid email profile'
 ```
