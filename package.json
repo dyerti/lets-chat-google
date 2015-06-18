@@ -19,8 +19,8 @@
     "passport-google-oauth": "^0.2.0"
   },
   "peerDependencies": {
-    "lodash": "^3.1.0",
-    "mongoose": "~3.8.22",
-    "passport": "^0.2.1"
+    "lodash": "*",
+    "mongoose": "*",
+    "passport": "*"
   }
 }
